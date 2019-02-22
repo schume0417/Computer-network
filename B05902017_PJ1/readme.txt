@@ -1,0 +1,14 @@
+用c實作雖然檔名是cpp
+有附上簡單的makefile
+以及編譯過後的執行檔
+也可以再用make編譯一次
+由於沒說出現違法的指令要怎麼辦
+因此在client端用簡單的迴圈去取得相關的參數
+timeout部分由於沒說傳的東西要多大
+因此server client間我都只有傳很少的訊息
+應該是不會有timeout的狀況發生
+接著就是把他們連起來並設定一些socket option
+在client的部分有做fork來處理連多個server
+在server的部分有做select來判斷是哪個client傳訊息
+或者是有新的client連進來
+
